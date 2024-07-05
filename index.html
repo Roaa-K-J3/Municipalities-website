@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع البلدية</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body
+    <div class="mainpage">
+
+    <h1>أهلا بكم في موقع البلدية للخدمات العامة</h1>
+    <div class="formal">
+    <h2 class="sign">اذا كنت لا تملك حساب قم بانشاء حساب من هنا<br><a href="create.html">انقر هنا</a></h2>
+    <h2 class="log">اذا كنت تملك حساب قم بتسجيل الدخول من هنا<br><a href="login.html">انقر هنا</a></h2></div>
+</div>
+<script>
+    const clickLinks = document.querySelectorAll(".click");
+    clickLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("You clicked the link: " + link.textContent);
+        });
+    });
+</script>
+</body>
+</html>

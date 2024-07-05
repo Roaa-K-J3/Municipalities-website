@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحةالرئيسية</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="main.html">الصفحةالرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="">احدث الاخبار</a>
+                    </li>
+                    <li>
+                        <a href="about.html">عن الموقع</a>
+                    </li>
+                    <li>
+                        <a id="logoutLink" href="#">تسجيل الخروج</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+    <div class='quodrant'>
+        <div class='qtop'>
+            <div class='quodrant1'> دفع فواتير المياه و الكهرباء</div>
+            <div class='quodrant2'>تقديم طلب رخصة منزل</div>
+        </div>
+        <div class='qbottom'>
+            <div class='quodrant3'>تقديم طلب اشتراك المياه و الكهرباء</div>
+            <div class='quodrant4'>تقديم شكوى</div>
+        </div>
+    </div>
+    
+    <script>
+        const quadrants = document.querySelectorAll('.quodrant1, .quodrant2, .quodrant3, .quodrant4');
+
+        quadrants.forEach(quadrant => {
+            quadrant.addEventListener('click', function () {
+                quadrant.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>

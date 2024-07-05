@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> تسجيل الدخول </title>
+</head>
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>تسجيل الدخول</h3>
+            <p>الرجاء ادخال معلوماتك لتسجيل الدخول</p>
+          </div>
+        </div>
+        <form class="login-form">
+          <input type="text" placeholder="اسم المستخدم"/>
+          <input type="password" placeholder="كلمة المرور"/>
+          <a class= "click " href="main.html">دخول</a>
+          <p class="message">ليس لديك حساب؟ <a href="create.html">انشئ حساب</a></p>
+        </form>
+      </div>
+    </div>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+          const loginForm = document.getElementById("login-form");
+          const loginButton = document.getElementById("login-button");
+
+          loginButton.addEventListener("click", function () {
+              const username = document.getElementById("username").value;
+              const password = document.getElementById("password").value;
+
+              // You can add your authentication logic here
+              if (username === "your_username" && password === "your_password") {
+                  alert("Login successful!");
+                  // Redirect to another page if needed
+                  window.location.href = "main.html";
+              } else {
+                  alert("Invalid username or password. Please try again.");
+              }
+          });
+      });
+  </script>
+</body>
+</html>

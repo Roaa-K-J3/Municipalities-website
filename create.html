@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انشاء حساب</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <h3>انشاء الحساب</h3>
+              <p>الرجاء ادخال معلوماتك انشاء الحساب</p>
+            </div>
+   
+    <form id="create-user-form">
+       
+         <!-- Name input -->
+         <div class="mb-3">
+            <label for="name" class="form-label">الاسم الرباعي</label>
+            <input type="text" class="form-control" id="name" name="الاسم الرباعي" required>
+        </div>
+
+         <!--id number-->
+         <div class="mb3">
+            <label for="id" class="form-label">رقم الهوية</label>
+            <input type="text" class="form-control" id="id number" name="رقم الهوية" required>
+        </div>
+
+          <!-- town-name input -->
+          <div class="mb-3">
+            <label for="town-name" class="form-label">اسم البلدة</label>
+            <input type="text" class="form-control" id="town-name" name="اسم البلدة" required>
+        </div>
+
+        <!-- Email input -->
+        <div class="mb-3">
+            <label for="email" class="form-label">الايميل</label>
+            <input type="email" class="form-control" id="email" name="الايميل" required>
+        </div>
+
+        <!--phone number-->
+        <div class="mb3">
+            <label for="phone number" class="form-label">رقم الهاتف</label>
+            <input type="text" class="form-control" id="phone number" name="رقم الهاتف" required>
+        </div>
+
+        <!-- Password input -->
+        <div class="mb-3">
+            <label for="password" class="form-label">كلمة السر</label>
+            <input type="password" class="form-control" id="password" name="كلمة السر">
+        </div>
+
+        <a class= "click " href="main.html">انشاء حساب</a>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("create-user-form");
+        
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+        
+                // You can add your form validation logic here
+                // Example: Check if the fields meet your criteria
+                const name = document.getElementById("name").value;
+                const id = document.getElementById("id").value;
+                const townName = document.getElementById("town-name").value;
+                const email = document.getElementById("email").value;
+                const phoneNumber = document.getElementById("phone-number").value;
+                const password = document.getElementById("password").value;
+        
+        
+                // If validation passes, you can submit the form or perform other actions
+                // Example:
+                if (name && id && townName && email && phoneNumber && password) {
+                    
+                    alert("Form is valid. Submitting...");
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+        });
+        
+    </script>
+ 
+</body>
+</html>
